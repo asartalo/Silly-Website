@@ -1,0 +1,9 @@
+[submodule "vendor/Twig"]
+	path = vendor/Twig
+	url = https://github.com/fabpot/Twig.git
+[submodule "vendor/Silly"]
+	path = vendor/Silly
+	url = https://github.com/asartalo/Silly.git
+[submodule "vendor/markdown-extra-extended"]
+	path = vendor/markdown-extra-extended
+	url = https://github.com/egil/php-markdown-extra-extended.git
