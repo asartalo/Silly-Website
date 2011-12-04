@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Silly: The Silly Little CLI Tool</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+  	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Lato:400,700,400italic">
+	<link rel="stylesheet" href="/css/base.css">
+	<link rel="stylesheet" href="/css/skeleton.css">
+	<link rel="stylesheet" href="/css/layout.css">
+	<link rel="stylesheet" href="/css/prettify.css">
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="/skeleton/images/favicon.ico">
+	<link rel="apple-touch-icon" href="/skeleton/images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/skeleton/images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/skeleton/images/apple-touch-icon-114x114.png">
+	<script src="/js/modernizr.custom.js"></script>
+<html>
+<head>
+</head>
+<body>
+<div class="container">
+	<div class="twelve columns mainContent">
+		{% block content %}{% endblock %}
+	</div>
+</div>
+<a href="http://github.com/asartalo/Silly"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/c641758e06304bc53ae7f633269018169e7e5851/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67" alt="Fork me on GitHub"></a>
+
+
+<script src="/js/prettify/lang.js"></script>
+<script src="/js/prettify/prettify.js"></script>
+<script src="/js/jquery-1.7.1.min.js"></script>
+<script>
+(function($){
+	$(function(){
+		$('code').filter('[class^="language"]').parent().addClass('prettyprint');
+		$('.fontface h1:first-child').html(
+			'<strong>Silly</strong> <span>The Silly Little CLI Tool</span>'
+		);
+		$('h1:first-child+p').addClass('intro');
+		prettyPrint();
+		$('.container').animate({opacity: 1}, 500);
+	});
+})(jQuery);
+</script>
+</body>
+</html>
