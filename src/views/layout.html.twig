@@ -22,10 +22,7 @@
 	<!-- CSS
   ================================================== -->
   	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Lato:400,700,400italic">
-	<link rel="stylesheet" href="/css/base.css">
-	<link rel="stylesheet" href="/css/skeleton.css">
-	<link rel="stylesheet" href="/css/layout.css">
-	<link rel="stylesheet" href="/css/prettify.css">
+	<link rel="stylesheet" href="/css/main.css">
 
 	<!-- Favicons
 	================================================== -->
@@ -39,9 +36,9 @@
 </head>
 <body>
 <div class="container">
-	<div class="twelve columns mainContent">
+	<article class="twelve columns mainContent" id="mainContent">
 		{% block content %}{% endblock %}
-	</div>
+	</article>
 </div>
 <a href="http://github.com/asartalo/Silly"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/c641758e06304bc53ae7f633269018169e7e5851/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67" alt="Fork me on GitHub"></a>
 
@@ -51,11 +48,63 @@
 (function($){
 	$(function(){
 		$('code').filter('[class^="language"]').parent().addClass('prettyprint');
-		$('.fontface h1:first-child').html(
+		$('.fontface h1:first-child').attr('id', 'typographicHeader').html(
 			'<strong>Silly</strong> <span>The Silly Little CLI Tool</span>'
 		);
 		$('h1:first-child+p').addClass('intro');
 		prettyPrint();
+
+		// Scale typographic header
+		var reScaleHeader = function() {
+			var
+				containerWidth = $('#mainContent').width(),
+				scaleFactor    = (1/700) * containerWidth,
+				scaleValue     = function(value) {
+					return (value * scaleFactor) + 'px';
+				};
+
+			// Big letters
+			$('#typographicHeader > strong').css({
+				fontSize:   scaleValue(500),
+				lineHeight: scaleValue(400),
+				left:       scaleValue(-13)
+			});
+
+			// Tag line
+			$('#typographicHeader > span').css({
+				fontSize:   scaleValue(96),
+				lineHeight: scaleValue(90),
+				top:        scaleValue(121),
+				padding:    scaleValue(9),
+				width:      scaleValue(706)
+			});
+		};
+
+		var makeId = function(str) {
+			return str.replace(/\W/g, '');
+		};
+
+		var generateTableOfContents = function(el) {
+			var sections = [];
+			el.find('h2').attr('id', function(index){
+				var newid = makeId($(this).text());
+				sections.push({id: newid, text: $(this).text()})
+				return newid;
+			});
+			var toc = '<ol id="sillyToc" class="toc">';
+			$.each(sections, function(index){
+				toc += '<li><a href="#' + sections[index].id + '">' + sections[index].text + '</a></li>';
+			});
+			el.find('h2').first().before(toc + '</ol>');
+		};
+
+		reScaleHeader();
+		generateTableOfContents($('article'));
+
+		$(window).resize(function(){
+			// Scale typographic header when resizing
+			reScaleHeader();
+		});
 		$('.container').animate({opacity: 1}, 500);
 	});
 })(jQuery);
