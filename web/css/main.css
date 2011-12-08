@@ -445,7 +445,7 @@ ul {
 	}
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 767px) {
 	.toc {
 		float:none;
 		margin-left:0;
@@ -601,7 +601,7 @@ ul {
 
     /* Note: Design for a width of 320px */
 
-    @media only screen and (max-width: 320px) {
+    @media only screen and (max-width: 767px) {
         .container { width: 300px; }
         .columns, .column { margin: 0; }
 
