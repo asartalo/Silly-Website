@@ -4,23 +4,9 @@
 <project name="Silly" default="build" basedir=".">
  <property name="source" value="src"/>
 
- <target name="clean" description="Clean up and create artifact directories">
-  <delete dir="${basedir}/build/api"/>
-  <delete dir="${basedir}/build/code-browser"/>
-  <delete dir="${basedir}/build/coverage"/>
-  <delete dir="${basedir}/build/logs"/>
-  <delete dir="${basedir}/build/pdepend"/>
-
-  <mkdir dir="${basedir}/build/api"/>
-  <mkdir dir="${basedir}/build/code-browser"/>
-  <mkdir dir="${basedir}/build/coverage"/>
-  <mkdir dir="${basedir}/build/logs"/>
-  <mkdir dir="${basedir}/build/pdepend"/>
- </target>
-
  <target name="updateSilly" description="UpdateSillyVendor">
-  <exec executable="cd" failonerror="true">
-    <arg line="${basedir}/vendor/Silly &amp;&amp; git pull origin master &amp;&amp; ${basedir}" />
+  <exec executable="php" failonerror="true">
+    <arg line="${basedir}/updateSilly" />
   </exec>
  </target>
 
@@ -30,5 +16,5 @@
   </exec>
  </target>
 
- <target name="build" depends="clean,phpunit"/>
+ <target name="build" depends="updateSilly,phpunit"/>
 </project>

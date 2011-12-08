@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+
+$url = 'https://github.com/asartalo/Silly.git';
+$depsDir = realpath(__DIR__) . '/vendor/Silly';
+
+if (!is_dir($depsDir)) {
+    system(sprintf('git clone %s %s', escapeshellarg($url), escapeshellarg($depsDir)));
+}
+
+system(sprintf('cd %s && git fetch origin', escapeshellarg($depsDir)));
