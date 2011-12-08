@@ -1,0 +1,14 @@
+/* MAIN */
+Developed for: Brainchild Projects
+Site: http://brainchildprojects.org
+
+
+/* TEAM */
+Developer / Designer: Wayne Duran
+Site: http://www.asartalo.org
+Twitter: @asartalo
+
+
+/* SITE */
+Standards: HTML5, CSS3
+Components: Modernizr, jQuery, Skeleton, Silex
