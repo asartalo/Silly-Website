@@ -373,8 +373,16 @@ pre {
 	line-height: 1.3em;
 }
 
+code {
+	font-family: "Ubuntu Mono", monospace;
+	background-color:#333;
+	padding: .05em .25em .2em;
+}
+
 pre>code {
 	overflow:auto;
+	background-color:#222;
+	border:none;
 }
 
 h1 {
@@ -433,6 +441,22 @@ ul {
 	color: #999;
 }
 
+footer.container {
+	border-top: 1px solid #333;
+	margin:50px auto 20px;
+	padding:10px 0;
+}
+
+footer .footerLinks {
+	float:left;
+	margin-bottom: 1.5em;
+}
+
+.footerInfo {
+	text-align:right;
+	margin-top:0;
+}
+
 @media only screen and (min-width: 1200px) {
 	.toc {
 		font-size: 24px;
@@ -456,6 +480,10 @@ ul {
 	.toc li {
 		line-height: 31px;
 	}
+
+	.footerInfo {
+		text-align:left;
+	}
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -468,6 +496,10 @@ ul {
 
 	.toc li {
 		line-height: 31px;
+	}
+
+	.footerInfo {
+		text-align:left;
 	}
 }
 
@@ -798,7 +830,7 @@ ul {
 .atn{color:#404}
 .atv{color:#060}
 }
-pre>code{padding:10px;background-color:#222;display:block;}
+pre>code{padding:10px;display:block;}
 ol.linenums{margin-top:0;margin-bottom:0}
 li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8{list-style-type:none}
 li.L1,li.L3,li.L5,li.L7,li.L9{background:#eee}

@@ -14,9 +14,17 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.class_path' => $projectRoot . '/vendor/Twig/lib',
 ));
 
+function getMarkDownText($file) {
+    $content = file($file);
+    array_shift($content);
+    return implode("", $content);
+}
+
 $app->get('/', function() use($app, $projectRoot) {
     return $app['twig']->render('index.html.twig', array(
-        'content' => MarkdownExtended(file_get_contents($projectRoot . '/vendor/Silly/README.md'))
+        'content' => MarkdownExtended(
+            getMarkDownText($projectRoot . '/vendor/Silly/README.md')
+        )
     ));
 });
 
