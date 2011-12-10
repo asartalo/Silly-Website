@@ -19,8 +19,11 @@ class SmokeTest extends WebTestCase {
     $crawler = $client->request('GET', '/');
 
     $this->assertTrue($client->getResponse()->isOk());
-    $this->assertEquals(1, count($crawler->filter('h1:contains("Silly")')));
-    $this->assertEquals(1, count($crawler->filter('footer:contains("Silly")')));
+    $this->assertEquals(
+      1, count($crawler->filter('h1:contains("Silly")')),
+      'Did not find the correct header'
+    );
+    $this->assertEquals(1, count($crawler->filter('footer p:contains("Wayne Duran")')));
   }
 
 }
