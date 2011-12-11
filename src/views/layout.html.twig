@@ -17,7 +17,7 @@
 
     <!-- Humans
   ================================================== -->
-	<link type="text/plain" rel="author" href="http://domain/humans.txt" />
+	<link type="text/plain" rel="author" href="/humans.txt" />
 
 	<!-- Mobile Specific Metas
   ================================================== -->
@@ -27,6 +27,7 @@
   ================================================== -->
   	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Lato:400,700,400italic">
 	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/print.css" media="print">
 
 	<!-- Favicons
 	================================================== -->
@@ -35,8 +36,6 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="/images/silly_72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="/images/silly_114x114.png">
 	<script src="/js/modernizr.custom.js"></script>
-<html>
-<head>
 </head>
 <body>
 <div class="container">
@@ -44,6 +43,9 @@
 		{% block content %}{% endblock %}
 	</article>
 </div>
+<hr>
+<p id="forkMe"><a href="http://github.com/asartalo/Silly">Fork me on Github</a></p>
+<hr>
 <footer class="container">
 	<p class="footerLinks six columns alpha">
 		See the <a href="http://github.com/asartalo/Silly">Github Project Page</a><br>
@@ -54,8 +56,6 @@
 		by Wayne Duran
 	</p>
 </footer>
-
-<a href="http://github.com/asartalo/Silly"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/c641758e06304bc53ae7f633269018169e7e5851/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67" alt="Fork me on GitHub"></a>
 
 <script src="/js/prettify/prettify.js"></script>
 <script src="/js/jquery-1.7.1.min.js"></script>

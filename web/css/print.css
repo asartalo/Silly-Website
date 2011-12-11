@@ -1,0 +1,75 @@
+html, body {
+	background-color: white;
+	color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	background-color: transparent !important;
+	color: #000 !important;
+}
+
+#typographicHeader {
+	height: auto;
+}
+
+h1 > span,
+h1 > strong,
+#typographicHeader > span,
+#typographicHeader > strong {
+	color: #000 !important;
+	display: inline !important;
+	position: static !important;
+	font-size: 64px !important;
+	padding:0 !important;
+	width: auto !important;
+	height: auto !important;
+	text-align: left !important;
+	line-height: normal !important;
+	background-color: transparent;
+}
+
+a {
+	color: #0C5F7B !important;
+	text-decoration: underline;
+}
+
+.columns {
+	float: none !important;
+}
+
+code {
+	background-color: transparent;
+}
+
+pre > code {
+	padding: 10px 0;
+	background-color: #fff;
+}
+
+.toc {
+	float: none !important;
+	margin-left: 1.3em !important;
+	width: auto !important;
+}
+
+#forkMe {
+	position: static;
+	height: auto;
+	width: auto;
+	background-image: none;
+}
+
+#forkMe a {
+	display: inline;
+	height: auto;
+	width: auto;
+}
+
+footer > p {
+	text-align: left !important;
+	float: none !important;
+	width: auto !important;
+	display: block !important;
+	padding: 0;
+	margin-left: 0 !important;
+}

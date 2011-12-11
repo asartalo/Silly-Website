@@ -397,7 +397,7 @@ h1 {
 }
 
 .fontface h1 {
-	font-family: 'LeagueGothicRegular';
+	font-family: 'LeagueGothicRegular', Impact, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 64px;
 	text-transform: uppercase;
 	font-weight: normal;
@@ -455,6 +455,24 @@ footer .footerLinks {
 .footerInfo {
 	text-align:right;
 	margin-top:0;
+}
+
+#forkMe {
+	background: url(https://a248.e.akamai.net/assets.github.com/img/c641758e06304bc53ae7f633269018169e7e5851/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67) 0 0 no-repeat transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#forkMe a {
+	display: block;
+	height: 149px;
+	width: 149px;
+	text-indent: -9999em;
+}
+
+hr {
+	display: none;
 }
 
 @media only screen and (min-width: 1200px) {
